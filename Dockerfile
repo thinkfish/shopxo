@@ -8,14 +8,14 @@ FROM php:7.2-cli
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
-RUN chmod +x /usr/local/bin/install-php-extensions && \
-    install-php-extensions gd xdebug
-
 # 安装 install-php-extensions 工具，您可以使用它来安装自己需要的 php 扩展，请参考：https://github.com/mlocati/docker-php-extension-installer
 # 例如，使用 RUN install-php-extensions @composer 来安装 composer
 COPY COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
-RUN chmod +x /usr/local/bin/install-php-extensions
+#RUN chmod +x /usr/local/bin/install-php-extensions
+
+RUN chmod +x /usr/local/bin/install-php-extensions && \
+    install-php-extensions gd xdebug
 
 # 设置容器内的当前目录
 WORKDIR /app
