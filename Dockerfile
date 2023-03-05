@@ -13,7 +13,7 @@ COPY COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions
 RUN chmod +x /usr/local/bin/install-php-extensions
 
 # 设置容器内的当前目录
-WORKDIR /app
+WORKDIR /shopxo
 
 # 将包括源文件在内的所有文件拷贝到容器中
 COPY . .
