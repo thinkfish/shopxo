@@ -3,7 +3,7 @@
 
 # 使用 php 官方提供的镜像，内置 fpm
 #FROM php:8.1-fpm
-FROM php:7.2-cli
+FROM ccr.ccs.tencentyun.com/qcloud/ubuntu
 
 # 安装 install-php-extensions 工具，您可以使用它来安装自己需要的 php 扩展，请参考：https://github.com/mlocati/docker-php-extension-installer
 # 例如，使用 RUN install-php-extensions @composer 来安装 composer
