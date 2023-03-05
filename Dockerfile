@@ -10,7 +10,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 
 # 安装 install-php-extensions 工具，您可以使用它来安装自己需要的 php 扩展，请参考：https://github.com/mlocati/docker-php-extension-installer
 # 例如，使用 RUN install-php-extensions @composer 来安装 composer
-COPY COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+#COPY COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 #RUN chmod +x /usr/local/bin/install-php-extensions
 
